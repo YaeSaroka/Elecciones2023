@@ -3,7 +3,7 @@ using Dapper;
 namespace Elecciones2023.Models;
 public static class BD
 {
-    private static string ConnectionString { get; set; } = @"Server=localhost;DataBase=SQL_Elecciones2023;Trusted_Connection=True;";
+    private static string ConnectionString { get; set; } = @"Server=localhost;DataBase=Elecciones2023;Trusted_Connection=True;";
     
     public static void AgregarCandidato(Candidato can)
     {   
@@ -33,5 +33,34 @@ public static class BD
         }
         return partidito;
     }
-    
+    public static Candidato VerInfoCandidato(int idcandidato)
+    {   
+        Candidato candidate = null;
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "SELECT * FROM candidato WHERE IdCandidato = @pidcandidato";
+            candidate = db.QueryFirstOrDefault<Candidato>(sql, new { pidcandidato = candidate.IdCandidato});
+        }
+        return candidate;
+    }
+    public static List<Partido> ListarPartidos()
+    {
+        List<Partido> ListadoPartidos= null;
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "SELECT * FROM partido";
+            ListadoPartidos=db.Query<Partido>(sql).ToList();
+        }
+        return ListadoPartidos;
+    }
+    public static List<Candidato> ListarCandidatos(int idPartido)
+    {
+        List<Candidato> ListadoCandidato= new List<Candidato>();
+        using (SqlConnection db = new SqlConnection(ConnectionString))
+        {
+            string sql = "SELECT * FROM candidato WHERE IdCandidato=@pidPartido";
+           ListadoCandidato= db.Query<Candidato>(sql).ToList();
+        }
+        return ListadoCandidato;
+    }
 }

@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\Elecciones2023.bundle.scp.css"
     },
     {
+      "Id": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\Img\\Frente-de-Todos.png",
+      "PackagePath": "staticwebassets\\Img\\Frente-de-Todos.png"
+    },
+    {
+      "Id": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\Img\\bandera_argentina.png",
+      "PackagePath": "staticwebassets\\Img\\bandera_argentina.png"
+    },
+    {
       "Id": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

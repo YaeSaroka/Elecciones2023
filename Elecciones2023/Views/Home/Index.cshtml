@@ -1,8 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+ <section class="elecciones">
+    <div class="partidos">
+        <a><img src="/Img/Frente-de-Todos.png" alt="Frente de Todos"></a>
+        <h4> Frente de Todos </h4></a>
+        <a href='@Url.Action("VerDetallePartido", new{idPartido=ViewBag.Partido[i].idPartido}) '><button>Ver Detalles Del Partido</button></a>
+    </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+ </section>
+
