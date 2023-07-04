@@ -6,3 +6,5 @@
 <h3> Apellido: @ViewBag.candidate.Apellido</h3>
 <h3>Fecha Nacimiento: @ViewBag.candidate.FechaNacimiento</h3>
 <h3>Postulación: @ViewBag.candidate.Postulacion</h3>
+
+<a href='@Url.Action("VerDetallePartido", new{Id_Partido=@ViewBag.candidate.FK_Partido}) ' class="btn btn-primary">Volver</a>
