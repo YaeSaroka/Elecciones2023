@@ -31,6 +31,7 @@ public class HomeController : Controller
     }
     public IActionResult VerDetallePartido(int idPartido)
     {
+        ViewBag.ListadoCandidato=BD.ListarCandidatos(idPartido);
         ViewBag.partidito=BD.VerInfoPartido(idPartido);
         ViewBag.candidate=BD.VerInfoCandidato(idPartido);
         return View("VerDetallePartido");
@@ -49,6 +50,7 @@ public class HomeController : Controller
     {
         BD.AgregarCandidato(can);
         return View("VerDetallePartido");
+        //return RedirectToAction("VerDetallePartido", IdPartido);
     }
     public IActionResult EliminarCandidato(int idCandidato, int idPartido)
     {

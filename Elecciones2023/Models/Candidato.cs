@@ -1,7 +1,7 @@
 public class Candidato
 {
-    public int IdCandidato {get;set;}
-    public int IdPartido{get;set;}
+    public int Id_Candidato {get;set;}
+    public int FK_Partido{get;set;}
     public string Apellido {get;set;}
     public string Nombre {get;set;}
     public DateTime FechaNacimiento {get;set;}

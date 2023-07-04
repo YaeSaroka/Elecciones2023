@@ -1,13 +1,22 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
- <section class="elecciones">
-    <div class="partidos">
-        <a><img src="/Img/Frente-de-Todos.png" alt="Frente de Todos"></a>
-        <h4> Frente de Todos </h4></a>
-        <a href='@Url.Action("VerDetallePartido", new{idPartido=ViewBag.Partido[i].idPartido}) '><button>Ver Detalles Del Partido</button></a>
-    </div>
+ <section style="margin-top:150px;">
+    <div class="row">
 
+        @foreach (Partido item  in ViewBag.ListadoPartidos)
+        { 
+            <div class="col-md-4 col-12">
+                <div class="card">
+                    <img src="/Img/Logos/@item.Logo" class="card-img-top" alt="ll">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Nombre</h5>
+                        <a href='@Url.Action("VerDetallePartido", new{idPartido=item.Id_Partido}) ' class="btn btn-primary">Ver Detalles Del Partido</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 
  </section>
 

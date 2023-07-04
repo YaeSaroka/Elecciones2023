@@ -10,7 +10,7 @@ public static class BD
         string SQL= "INSERT INTO Candidato(IdCandidato, IdPartido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) VALUES (@pIdCandidato, @pIdPartido, @pApellido, @pNombre, @pFechaNacimiento, @pFoto, @pPostulacion)";
         using(SqlConnection db = new SqlConnection(ConnectionString))
         {
-            db.Execute(SQL, new {pIdCandidato=can.IdCandidato, pIPartido= can.IdPartido, pApellido=can.Apellido, pNombre=can.Nombre, pFechaNacimiento=can.FechaNacimiento, pFoto=can.Foto, pPostulacion=can.Postulacion});
+            db.Execute(SQL, new {pIdCandidato=can.Id_Candidato, pIPartido= can.FK_Partido, pApellido=can.Apellido, pNombre=can.Nombre, pFechaNacimiento=can.FechaNacimiento, pFoto=can.Foto, pPostulacion=can.Postulacion});
         } 
     }
     public static int EliminarCandidato(int idCandidato)
@@ -25,27 +25,27 @@ public static class BD
     }
     public static Partido VerInfoPartido(int idPartido)
     {   
-        Partido partidito = null;
+        Partido par;
         using (SqlConnection db = new SqlConnection(ConnectionString))
         {
-            string sql = "SELECT * FROM Usuarios WHERE IdPartido = @pidPartido";
-            partidito = db.QueryFirstOrDefault<Partido>(sql, new { pidPartido = partidito.IdPartido});
+            string sql = "SELECT * FROM Partido WHERE Id_Partido = @idPartido";
+            par = db.QueryFirstOrDefault<Partido>(sql, new{ idPartido = idPartido});
         }
-        return partidito;
+        return par;
     }
     public static Candidato VerInfoCandidato(int idcandidato)
     {   
-        Candidato candidate = null;
+        Candidato candidate;
         using (SqlConnection db = new SqlConnection(ConnectionString))
         {
-            string sql = "SELECT * FROM candidato WHERE IdCandidato = @pidcandidato";
-            candidate = db.QueryFirstOrDefault<Candidato>(sql, new { pidcandidato = candidate.IdCandidato});
+            string sql = "SELECT * FROM candidato WHERE Id_Candidato = @idcandidato ";
+            candidate = db.QueryFirstOrDefault<Candidato>(sql, new { idcandidato = idcandidato});
         }
         return candidate;
     }
     public static List<Partido> ListarPartidos()
     {
-        List<Partido> ListadoPartidos= null;
+        List<Partido> ListadoPartidos;
         using (SqlConnection db = new SqlConnection(ConnectionString))
         {
             string sql = "SELECT * FROM partido";
@@ -58,8 +58,8 @@ public static class BD
         List<Candidato> ListadoCandidato= new List<Candidato>();
         using (SqlConnection db = new SqlConnection(ConnectionString))
         {
-            string sql = "SELECT * FROM candidato WHERE IdCandidato=@pidPartido";
-           ListadoCandidato= db.Query<Candidato>(sql).ToList();
+            string sql = "SELECT * FROM Candidato WHERE FK_Partido = @idpartido ";
+            ListadoCandidato= db.Query<Candidato>(sql, new { idpartido = idPartido}).ToList();
         }
         return ListadoCandidato;
     }
