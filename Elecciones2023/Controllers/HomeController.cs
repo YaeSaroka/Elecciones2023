@@ -39,7 +39,7 @@ public class HomeController : Controller
     public IActionResult VerDetalleCandidato(int idCandidato)
     {
         ViewBag.candidate=BD.VerInfoCandidato(idCandidato);
-        return View("VerDetalleCandidato");
+        return  View("VerDetalleCandidato");
     }
     public IActionResult AgregarCandidato(int idPartido)
     {
@@ -49,14 +49,13 @@ public class HomeController : Controller
     public IActionResult GuardarCandidato(Candidato can)
     {
         BD.AgregarCandidato(can);
-        return View("VerDetallePartido");
-        //return RedirectToAction("VerDetallePartido", IdPartido);
+        return RedirectToAction("VerDetallePartido",new{idPartido=can.FK_Partido});
     }
     public IActionResult EliminarCandidato(int idCandidato, int idPartido)
     {
         BD.EliminarCandidato(idCandidato);
         BD.VerInfoPartido(idPartido);
-        return View("VerDetallePartido");
+        return RedirectToAction("VerDetallePartido",new{idPartido=idPartido});
     }
     public IActionResult Elecciones()
     {
@@ -65,5 +64,9 @@ public class HomeController : Controller
     public IActionResult Creditos()
     {
         return View("VerCreditos");
+    }
+    protected void lnkRedireccion_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("VerDetallePartido");
     }
 }

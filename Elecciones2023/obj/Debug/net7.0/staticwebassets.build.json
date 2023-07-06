@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HHYXneGfAj2ZNJAkKgF+IiQFxH6wF/pT6InkZyA0ads=",
+  "Hash": "j4wQuDCyPiOGLMnJBAFW6gATa4mIux5Gg1h0+kvRA4w=",
   "Source": "Elecciones2023",
   "BasePath": "_content/Elecciones2023",
   "Mode": "Default",
@@ -153,12 +153,12 @@
       "OriginalItemSpec": "wwwroot\\Img\\Candidatos\\milei.jpg"
     },
     {
-      "Identity": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\Img\\Candidatos\\morales.jpg",
+      "Identity": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\Img\\Candidatos\\morales.png",
       "SourceId": "Elecciones2023",
       "SourceType": "Discovered",
       "ContentRoot": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\",
       "BasePath": "_content/Elecciones2023",
-      "RelativePath": "Img/Candidatos/morales.jpg",
+      "RelativePath": "Img/Candidatos/morales.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -167,7 +167,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Img\\Candidatos\\morales.jpg"
+      "OriginalItemSpec": "wwwroot\\Img\\Candidatos\\morales.png"
+    },
+    {
+      "Identity": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\Img\\Candidatos\\morales.png.jpg",
+      "SourceId": "Elecciones2023",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\",
+      "BasePath": "_content/Elecciones2023",
+      "RelativePath": "Img/Candidatos/morales.png.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\Candidatos\\morales.png.jpg"
     },
     {
       "Identity": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\Img\\Candidatos\\rossi.jpg",

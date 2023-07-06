@@ -7,19 +7,19 @@ public static class BD
     
     public static void AgregarCandidato(Candidato can)
     {   
-        string SQL= "INSERT INTO Candidato(IdCandidato, IdPartido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) VALUES (@pIdCandidato, @pIdPartido, @pApellido, @pNombre, @pFechaNacimiento, @pFoto, @pPostulacion)";
+        string SQL= "INSERT INTO Candidato(Id_Candidato, FK_Partido, Apellido, Nombre, FechaNacimiento, Foto, Postulacion) VALUES (@pIdCandidato, @pIdPartido, @pApellido, @pNombre, @pFechaNacimiento, @pFoto, @pPostulacion)";
         using(SqlConnection db = new SqlConnection(ConnectionString))
         {
-            db.Execute(SQL, new {pIdCandidato=can.Id_Candidato, pIPartido= can.FK_Partido, pApellido=can.Apellido, pNombre=can.Nombre, pFechaNacimiento=can.FechaNacimiento, pFoto=can.Foto, pPostulacion=can.Postulacion});
+            db.Execute(SQL, new {pIdCandidato=can.Id_Candidato, pIdPartido= can.FK_Partido, pApellido=can.Apellido, pNombre=can.Nombre, pFechaNacimiento=can.FechaNacimiento, pFoto=can.Foto, pPostulacion=can.Postulacion});
         } 
     }
     public static int EliminarCandidato(int idCandidato)
     {
         int RegistrosEliminados=0;
-        string sql= "DELETE FROM Candidato WHERE IdCandidato=@idCandidato";
+        string sql= "DELETE FROM Candidato WHERE Id_Candidato=@idCandidato";
         using(SqlConnection db= new SqlConnection(ConnectionString))
         {
-            RegistrosEliminados= db.Execute(sql, new{IdCandidato=idCandidato});
+            RegistrosEliminados= db.Execute(sql, new{idCandidato=idCandidato});
         }
         return RegistrosEliminados;
     }
