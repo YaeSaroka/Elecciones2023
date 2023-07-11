@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "j4wQuDCyPiOGLMnJBAFW6gATa4mIux5Gg1h0+kvRA4w=",
+  "Hash": "7KGVjYfiIxnhSIaLdij0RW+H0v0Bu8bqwO3lJYYJJOM=",
   "Source": "Elecciones2023",
   "BasePath": "_content/Elecciones2023",
   "Mode": "Default",
@@ -236,6 +236,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Img\\Candidatos\\villa.png"
+    },
+    {
+      "Identity": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\Img\\imagen_creditos.jpg",
+      "SourceId": "Elecciones2023",
+      "SourceType": "Discovered",
+      "ContentRoot": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\",
+      "BasePath": "_content/Elecciones2023",
+      "RelativePath": "Img/imagen_creditos.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Img\\imagen_creditos.jpg"
     },
     {
       "Identity": "Z:\\2023\\Progamacion\\2Bimestre\\TP06\\Elecciones2023\\wwwroot\\Img\\Logos\\Frente-de-Todos.png",

@@ -2,27 +2,30 @@
     ViewData["Title"] = "VerDetallePartido";
 }
 <body>
-<img src= "/Img/Logos/@ViewBag.partidito.Logo" alt="foto partido">
-<h1> @ViewBag.partidito.Nombre</h1>
-<h3> Ver más infomación: @ViewBag.partidito.SitioWeb</h3>
-<h3>Fecha Fundación: @ViewBag.partidito.FechaFundacion</h3>
-<h3>Cantidad De Diputados: @ViewBag.partidito.CantidadDiputados</h3>
-<h3>Cantidad De Senadores: @ViewBag.partidito.CantidadSenadores</h3>
 
-<section style="margin-top:150px;">
+<img class="logo1" src= "/Img/Logos/@ViewBag.partidito.Logo" alt="foto partido">
+ <h1> @ViewBag.partidito.Nombre</h1>
+<h3> <b>Ver más infomación:</b> @ViewBag.partidito.SitioWeb</h3>
+<h3><b>Fecha Fundación:</b> @ViewBag.partidito.FechaFundacion</h3>
+<h3><b>Cantidad De Diputados:</b> @ViewBag.partidito.CantidadDiputados</h3>
+<h3><b>Cantidad De Senadores: </b>@ViewBag.partidito.CantidadSenadores</h3>
+<section style="margin-top:100px;">
 <div class="row">
     
 @foreach (Candidato item  in ViewBag.ListadoCandidato)
-    {   <div class="col-md-4 col-12">
+    {   <div class="col-md-6 col-12">
             <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">@item.Nombre @item.Apellido</h5>
-                  <img src="/Img/Candidatos/@item.Foto" class="card-img-top" alt="ll">
-                  <a href='@Url.Action("VerDetalleCandidato", new{idCandidato=item.Id_Candidato}) ' class="btn btn-primary">Ver Detalles Del Candidato</a>
+                  <div class="card-body text-center">
+                    <h1 class="card-title">@item.Nombre @item.Apellido</h1>
+                  <img id="foto_cand"src="/Img/Candidatos/@item.Foto" class="card-img-top" alt="ll">
+                  <a href='@Url.Action("VerDetalleCandidato", new{idCandidato=item.Id_Candidato}) ' class="btn btn-info md-block">Ver Detalles Del Candidato</a>
                 </div>
             </div>
         </div>
     }
-<a href='@Url.Action("AgregarCandidato", new{idPartido=@ViewBag.partidito.Id_Partido}) ' class="btn btn-primary">Agregar Candidato</a>
+<div class="row" style="margin-top:120px;">
+<a href='@Url.Action("AgregarCandidato", new{idPartido=@ViewBag.partidito.Id_Partido}) ' class="btn btn-info">Agregar Candidato</a>
+</div>
+
 </div>
 </body>

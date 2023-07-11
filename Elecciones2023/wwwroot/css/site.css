@@ -21,3 +21,31 @@ body {
   margin-bottom: 60px;
   margin-top: 150px;
 }
+#foto{
+  width: 400px;
+  border-radius: 100%;
+
+}
+#foto_cand{
+  width: 300px;
+  height: 250px;
+}
+h3{
+  font-size: 15px;
+  font-family: Verdana;
+}
+.logo1{
+  width: 300px;
+  height: auto;
+}
+h1 {
+  font-family: Arial Black; 
+  font-weight: bold; font-size: 30px; 
+  background: #202020; 
+  -webkit-background-clip: text; 
+  -moz-background-clip: text; 
+  background-clip: text; 
+  color: transparent; 
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+
+  }
